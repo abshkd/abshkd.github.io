@@ -7,11 +7,14 @@
 <p>
 Jupyter Notebooks you can choose from:
 <ul>
-<li>applejack: This is the recommended server. Minimal Scipy, pandas, good for everyone. <a href="https://hub.docker.com/r/jupyter/scipy-notebook">Jupyter/scipy-notebook</li>
-<li>fluttershy: applejack + tensorflow + keras</li>
-<li>rainbowdash: fluttershy but GPU based (work in progress)<li>
+<li>applejack: This is the recommended server. Minimal Scipy, pandas, good for everyone. <a href="https://hub.docker.com/r/jupyter/scipy-notebook">Jupyter/scipy-notebook</a></li>
+<li>fluttershy: applejack + tensorflow + keras <a href="https://hub.docker.com/r/jupyter/tensorflow-notebook">Jupyter/Tensorflow-notebook</a></li>
+<li>rainbowdash: fluttershy but GPU based (work in progress). This is purely experimental and the volume seems to differ from other Jupyter stacks. Which means your data is not copied to this server.<li>
+<li>
 </ul>
 </p>
+<p> Data persistence. Please use the /work folder to save your files and data. Nothing outside that folder is retained across reboots. When you change the spawned container/server you data remains the same!
+To change container, hit "Control Panel", "Stop Server" and then "Start My Server". You can then select one of the docker images available.</p>
 
 <footer>
 <p> to be updated once I figure out Jekyll blogs - adujari</p>
