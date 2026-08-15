@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <header class="page-header">
+    <p class="eyebrow">Browse</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}<div class="content">{{ . }}</div>{{ end }}
+  </header>
+  <section class="feed">
+    {{ range .Paginator.Pages }}{{ partial "post-card.html" . }}{{ else }}<p class="empty">Nothing here yet.</p>{{ end }}
+    {{ partial "pagination.html" . }}
+  </section>
+{{ end }}

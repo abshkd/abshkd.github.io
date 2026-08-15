@@ -1,0 +1,35 @@
+baseURL: https://singularity.sg/
+locale: en-SG
+title: Singularity
+copyright: "(c) {year} adujari"
+
+pagination:
+  pagerSize: 10
+
+taxonomies:
+  tag: tags
+
+permalinks:
+  posts: /:year/:month/:slug/
+
+params:
+  author: adujari
+  description: Short notes on technology, learning, and things worth remembering.
+  intro: A small corner of the internet for short notes and longer thoughts.
+  github: https://github.com/abshkd
+
+outputs:
+  home:
+    - HTML
+    - RSS
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: false
+  highlight:
+    noClasses: false
+
+caches:
+  images:
+    dir: :cacheDir/images

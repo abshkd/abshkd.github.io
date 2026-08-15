@@ -1,0 +1,20 @@
+{{ define "main" }}
+  <article class="post single">
+    <header>
+      {{ if eq .Section "posts" }}<a class="back" href="{{ site.Home.RelPermalink }}">← All notes</a>{{ end }}
+      <h1>{{ .Title }}</h1>
+      {{ if .Date }}
+        <div class="post-meta">
+          <time datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date.Format "2 January 2006" }}</time>
+          {{ with .ReadingTime }}<span>· {{ . }} min read</span>{{ end }}
+        </div>
+      {{ end }}
+    </header>
+    <div class="content">{{ .Content }}</div>
+    {{ with .GetTerms "tags" }}
+      <footer class="tags" aria-label="Tags">
+        {{ range . }}<a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a>{{ end }}
+      </footer>
+    {{ end }}
+  </article>
+{{ end }}

@@ -1,0 +1,21 @@
+{{ define "main" }}
+  <section class="intro">
+    <p class="eyebrow">Microblog</p>
+    <h1>{{ site.Params.intro }}</h1>
+    <p>{{ site.Params.description }}</p>
+  </section>
+
+  <section class="feed" aria-labelledby="latest-notes">
+    <h2 id="latest-notes">Latest notes</h2>
+    {{ $posts := where site.RegularPages "Section" "posts" }}
+    {{ $paginator := .Paginate $posts }}
+    {{ if $paginator.Pages }}
+      {{ range $paginator.Pages }}
+        {{ partial "post-card.html" . }}
+      {{ end }}
+      {{ partial "pagination.html" . }}
+    {{ else }}
+      <p class="empty">The first note is still being written. Check back soon, or subscribe via <a href="{{ (site.Home.OutputFormats.Get `rss`).RelPermalink }}">RSS</a>.</p>
+    {{ end }}
+  </section>
+{{ end }}

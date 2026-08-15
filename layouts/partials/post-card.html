@@ -1,0 +1,8 @@
+<article class="post-card">
+  <time datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date.Format "02 Jan 2006" }}</time>
+  <div>
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    {{ with .Summary }}<p>{{ . | plainify | truncate 220 }}</p>{{ end }}
+    {{ with .GetTerms "tags" }}<div class="tags">{{ range . }}<a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a>{{ end }}</div>{{ end }}
+  </div>
+</article>
