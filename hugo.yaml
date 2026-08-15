@@ -1,7 +1,7 @@
 baseURL: https://singularity.sg/
 locale: en-SG
 title: Singularity
-copyright: "(c) {year} adujari"
+copyright: "(c) {year} Abhishek Dujari"
 
 pagination:
   pagerSize: 10
@@ -13,7 +13,7 @@ permalinks:
   posts: /:year/:month/:slug/
 
 params:
-  author: adujari
+  author: Abhishek Dujari
   description: Short notes on technology, learning, and things worth remembering.
   intro: A small corner of the internet for short notes and longer thoughts.
   github: https://github.com/abshkd

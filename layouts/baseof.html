@@ -6,6 +6,7 @@
     <meta name="color-scheme" content="light dark">
     <title>{{ if not .IsHome }}{{ .Title }} · {{ end }}{{ site.Title }}</title>
     <meta name="description" content="{{ .Description | default site.Params.description }}">
+    <meta name="author" content="{{ site.Params.author }}">
     <link rel="canonical" href="{{ .Permalink }}">
     {{ with .OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" title="{{ site.Title }}" href="{{ .Permalink }}">{{ end }}
     {{ $style := resources.Get "css/main.css" | minify | fingerprint }}

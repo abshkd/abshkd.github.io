@@ -6,4 +6,6 @@ menu:
     weight: 20
 ---
 
-Singularity is a personal microblog by [adujari](https://github.com/abshkd): short notes on technology, learning, and things worth remembering.
+I'm Abhishek Dujari. Singularity is my personal microblog for short notes on technology, learning, and things worth remembering.
+
+You can also find me on [GitHub](https://github.com/abshkd), [Hugging Face](https://huggingface.co/ovedrive), and [LinkedIn](https://www.linkedin.com/in/abhishekdujari/).
