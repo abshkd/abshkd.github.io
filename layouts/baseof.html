@@ -25,7 +25,11 @@
     </main>
     <footer class="site-footer">
       <span>{{ replace site.Copyright "{year}" now.Year }}</span>
-      {{ with site.Params.github }}<a href="{{ . }}" rel="me">GitHub</a>{{ end }}
+      <nav aria-label="Social links">
+        {{ with site.Params.github }}<a href="{{ . }}" rel="me">GitHub</a>{{ end }}
+        {{ with site.Params.huggingface }}<a href="{{ . }}" rel="me">Hugging Face</a>{{ end }}
+        {{ with site.Params.linkedin }}<a href="{{ . }}" rel="me">LinkedIn</a>{{ end }}
+      </nav>
     </footer>
   </body>
 </html>

@@ -17,6 +17,8 @@ params:
   description: Short notes on technology, learning, and things worth remembering.
   intro: A small corner of the internet for short notes and longer thoughts.
   github: https://github.com/abshkd
+  huggingface: https://huggingface.co/ovedrive
+  linkedin: https://www.linkedin.com/in/abhishekdujari/
 
 outputs:
   home:
